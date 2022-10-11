@@ -7,11 +7,11 @@ defmodule BlockScout.Mixfile do
     [
       # app: :block_scout,
       # aliases: aliases(config_env()),
-      version: "4.1.7",
+      version: "4.1.8",
       apps_path: "apps",
       deps: deps(),
       dialyzer: dialyzer(),
-      elixir: "~> 1.12",
+      elixir: "~> 1.13",
       preferred_cli_env: [
         credo: :test,
         dialyzer: :test
@@ -25,7 +25,8 @@ defmodule BlockScout.Mixfile do
             explorer: :permanent,
             indexer: :permanent
           ],
-          steps: [:assemble, &copy_prod_runtime_config/1]
+          steps: [:assemble, &copy_prod_runtime_config/1],
+          validate_compile_env: false
         ]
       ]
     ]

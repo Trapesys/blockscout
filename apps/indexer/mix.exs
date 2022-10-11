@@ -10,11 +10,11 @@ defmodule Indexer.MixProject do
       deps: deps(),
       deps_path: "../../deps",
       description: "Fetches block chain data from on-chain node for later reading with Explorer.",
-      elixir: "~> 1.10",
+      elixir: "~> 1.13",
       elixirc_paths: elixirc_paths(Mix.env()),
       lockfile: "../../mix.lock",
       start_permanent: Mix.env() == :prod,
-      version: "0.1.0"
+      version: "4.1.8"
     ]
   end
 
@@ -39,7 +39,7 @@ defmodule Indexer.MixProject do
     [
       # Optional dependency of `:spandex` for `Spandex.Decorators`
       {:decorator, "~> 1.4"},
-      # JSONRPC access to Parity for `Explorer.Indexer`
+      # JSONRPC access to Nethermind for `Explorer.Indexer`
       {:ethereum_jsonrpc, in_umbrella: true},
       # RLP encoding
       {:ex_rlp, "~> 0.5.2"},
